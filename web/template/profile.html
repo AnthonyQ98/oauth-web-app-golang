@@ -3,8 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+    <link rel="stylesheet" href="../../styles/main.css">
 </head>
 <body>
+{{ template "header" . }}
 
+
+<div class="profile-info container">
+    <h1>User Profile</h1>
+    <p>Username: {{ .Username }}</p>
+    <p>Email: {{ .Email }}</p>
+</div>
+
+{{ template "footer" . }}
 </body>
 </html>

@@ -6,6 +6,7 @@ import (
 	"github.com/gofiber/fiber/v2"
 	"io/ioutil"
 	"net/http"
+	"net/url"
 )
 
 func GoogleLogin(c *fiber.Ctx) error {
@@ -37,11 +38,12 @@ func GoogleCallback(c *fiber.Ctx) error {
 		return c.SendString("User Data Fetch Failed")
 	}
 
+	defer resp.Body.Close()
 	userData, err := ioutil.ReadAll(resp.Body)
 	if err != nil {
 		return c.SendString("JSON Parsing Failed")
 	}
 
-	return c.SendString(string(userData))
-
+	// Redirect to the profile page with user data as query parameters
+	return c.Redirect("/profile?data=" + url.QueryEscape(string(userData)))
 }

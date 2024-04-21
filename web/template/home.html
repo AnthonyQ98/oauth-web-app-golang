@@ -2,9 +2,18 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>{{ .Title }}</title>
+    <link rel="stylesheet" href="../../styles/main.css">
 </head>
 <body>
+{{ template "header" . }}
 
+<!-- Home page content -->
+<div class="container">
+    <h1>Welcome to My Website!</h1>
+    <p>This is the home page content.</p>
+</div>
+
+{{ template "footer" . }}
 </body>
 </html>
