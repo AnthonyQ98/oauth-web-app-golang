@@ -7,15 +7,8 @@ import (
 	"os"
 )
 
-package config
-
 import (
-"log"
-"os"
-
-"github.com/joho/godotenv"
-"golang.org/x/oauth2"
-"golang.org/x/oauth2/google"
+	"log"
 )
 
 type Config struct {

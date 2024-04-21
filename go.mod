@@ -3,6 +3,8 @@ module github.com/anthonyq98/oauth-web-app-golang
 go 1.22.1
 
 require (
+	cloud.google.com/go/compute v1.20.1 // indirect
+	cloud.google.com/go/compute/metadata v0.2.3 // indirect
 	github.com/andybalholm/brotli v1.1.0 // indirect
 	github.com/gofiber/fiber/v2 v2.52.4 // indirect
 	github.com/google/uuid v1.6.0 // indirect
