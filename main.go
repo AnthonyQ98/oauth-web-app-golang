@@ -1,7 +1,7 @@
 package main
 
 import (
-	"github.com/Siddheshk02/go-oauth2/controllers" //imoprting the controllers package
+	"github.com/anthonyq98/oauth-web-app-golang/controllers"
 	"github.com/gofiber/fiber/v2"
 )
 
